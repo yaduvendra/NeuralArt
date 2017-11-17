@@ -10,3 +10,5 @@ Product Owner accepts the User Story
 
 
 Style Guildlines:
+Python: https://www.python.org/dev/peps/pep-0008/
+HTML: https://www.w3schools.com/html/html5_syntax.asp

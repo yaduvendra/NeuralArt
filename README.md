@@ -1,14 +1,14 @@
-# NeuralArt
+# NeuralArt <br />
 
-Definition of Done:  
+Definition of Done:  <br />
 
-Code reviewed . 
-Acceptance criteria met . 
-Functional Tests passed . 
-Non-Functional requirements met . 
-Product Owner accepts the User Story . 
+Code reviewed <br />
+Acceptance criteria met <br />
+Functional Tests passed <br />
+Non-Functional requirements met <br />
+Product Owner accepts the User Story <br />
 
 
 Style Guildlines:
-Python: https://www.python.org/dev/peps/pep-0008/ . 
-HTML: https://www.w3schools.com/html/html5_syntax.asp . 
+Python: https://www.python.org/dev/peps/pep-0008/ <br />
+HTML: https://www.w3schools.com/html/html5_syntax.asp <br />

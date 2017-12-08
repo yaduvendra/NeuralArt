@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="static/js/jquery2.2.js"></script>
+    <script src="static/js/main.js"></script>
+
+    <title>Neural Art</title>
+</head>
+<body>
+
+  <section>
+    <div id="hero" class="container-fluid" >
+      <div class="hero-content">
+        <h1 class="hero-h1">Neural Art<br>Using Artificial Intelligence<br>To Create Unique Art</h1>
+        <button class="create-art" id = "create">Create Art</button>
+      </div>
+    </div>
+  </section>
+      <form method="POST" action="/">
+        <div class="container-fluid form-group" id="user-image">
+      		<div class="container">
+      			<div class="row">
+      				<div class="col-sm-12 panel-content">
+      					<h2 class="panel-h2">Choose Your Image</h2>
+      					<p class="panel-p">The first step in the process of generating your new art piece is to select an image you<br>
+      					                   would like to apply an artists style to. Please provide a google image link below</p>
+      				</div>
+      			</div>
+            <div class="row">
+              <div class="col-sm-12 panel-content">
+                {{ form.urlName.label }}
+
+                {% if form.urlName.errors %}
+                {% for error in form.urlName.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %}
+                {% endif %}
+
+                {{ form.urlName(class="form-control")}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 panel-content">
+                {{ form.urlLink.label }}
+
+                {% if form.urlLink.errors %}
+                {% for error in form.urlLink.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %}
+                {% endif %}
+
+                {{ form.urlLink(class="form-control")}}
+              </div>
+            </div>
+      		</div>
+      	</div>
+
+        <!-- Choose an Artist -->
+      	<div class="container-fluid form-group" id="artist-style">
+      		<div class="container">
+      			<div class="row">
+      				<div class="col-sm-12 panel-content">
+      					<h2 class="panel-h2">Choose An Artist Style</h2>
+      					<p class="panel-p">The next step in the process of generating your new art piece is to select an artists<br>
+      														 style that you would like to aply to your image. Please select a style below.</p>
+
+      				</div>
+      			</div>
+      			<div class="row">
+      				<div class="col-sm-2 artist">
+                <label class ="user-image">
+                  <input type="radio" name="style" id="option1" value="wave.ckpt"> </input>
+                  <img src="static/imgs/style/wave.jpg">
+                </label>
+      				</div>
+              <div class="col-sm-2 artist">
+                <label class ="user-image">
+                  <input type="radio" name="style" id="option2" value="rain_princess.ckpt"> </input>
+                  <img src="static/imgs/style/rain_princess.jpg">
+                </label>
+      				</div>
+              <div class="col-sm-2 artist">
+                <label class ="user-image">
+                  <input type="radio" name="style" id="option3" value="la_muse.ckpt"> </input>
+                  <img src="static/imgs/style/la_muse.jpg">
+                </label>
+      				</div>
+              <div class="col-sm-2 artist">
+                <label class ="user-image">
+                  <input type="radio" name="style" id="option4" value="scream.ckpt"> </input>
+                  <img src="static/imgs/style/the_scream.jpg">
+                </label>
+      				</div>
+              <div class="col-sm-2 artist">
+                <label class ="user-image">
+                  <input type="radio" name="style" id="option5" value="wreck.ckpt"> </input>
+                  <img src="static/imgs/style/the_shipwreck_of_the_minotaur.jpg">
+                </label>
+      				</div>
+              <div class="col-sm-2 artist">
+                <label class ="user-image">
+                  <input type="radio" name="style" id="option6" value="udnie.ckpt"> </input>
+                  <img src="static/imgs/style/udnie.jpg">
+                </label>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+        <div class="container-fluid form-group" id="generate-art">
+    			<div class="container">
+    				<div class="row">
+    					<div class="col-sm-12 panel-content">
+    						<h2 class="panel-h2">Generate Your Art</h2>
+    						<p class="panel-p">Please click the generate art button when you are ready<br>
+    						                   This process can take 15 seconds to create the new art piece.</p>
+
+    					</div>
+    				</div>
+            <div class="row">
+              {{ form.endpoint.label }}
+
+              {% if form.endpoint.errors %}
+                {% for error in form.endpoint.errors %}
+                  <p class="error-message">{{ error }}</p>
+                {% endfor %}
+              {% endif %}
+
+              {{ form.endpoint(class="form-control")}}
+
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                {{ form.submit(class="submit")}}
+              </div>
+            </div>
+    		</div>
+      </div>
+<!–– ############################### Modifications ######################### ––>
+ <!–– ############################### End Modifications ######################### ––>
+
+      </form>
+
+
+  <div class="container-fluid results" id="result1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 result-img">
+          <img class = "result-img" src = {{ valueImage }} >
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+		  <p>&copy; 2017. All Rights Reserved by Neural Art UC Santa Cruz</p>
+	</footer>
+
+</body>
+{% if scroll %}
+<script>
+    document.getElementById('{{ scroll }}').scrollIntoView();
+    // or
+    document.location.hash = '#' + '{{ scroll }}';
+</script>
+{% endif %}
+</html>

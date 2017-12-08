@@ -1,0 +1,265 @@
+body{
+
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+/***------------------ Header -------------------***/
+#neural, #art {
+	font-family: helvetica;
+	font-size: 16px;
+	color: white !important;
+
+}
+
+#art {
+	font-weight: bold;
+}
+
+#logo-border {
+	transform: skew(-10deg);
+	-webkit-transform: skew(-10deg);
+	   -moz-transform: skew(-10deg);
+	     -o-transform: skew(-10deg);
+	padding-left: 4px;
+	padding-right: 4px;
+	border: .1px solid white;
+}
+
+header{
+	background-color: black !important;
+
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+#hero{
+	display: table;
+	background: url('../imgs/hero.jpg') no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	text-align: center;
+}
+
+.hero-content{
+	display: table-cell;
+	vertical-align: middle;
+}
+.hero-h1{
+	font-size: 48px;
+	line-height: 52px;
+	font-weight: bold;
+	font-stretch: condensed;
+}
+
+#hero .create-art{
+	background-color: transparent;
+	width: 185px;
+	height: 49px;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border: 2px solid white;
+	margin-top: 25px;
+}
+#hero .create-art:hover{
+	background-color: #50E3C2;
+
+}
+#hero .create-art:active{
+	outline: none;
+
+}
+.create-art{
+	background-color: #50E3C2;
+	width: 185px;
+	height: 49px;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border: none;
+	margin-top: 25px;
+	 -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.create-art:hover{
+ 	/*box-shadow: inset 0 0 0 .1px #27496d,0 1px 5px #193047;*/
+ 	 background-color: #30beac;
+}
+
+/* ==========================================================================
+   User Image
+   ========================================================================== */
+
+#user-image{
+	width: 100%;
+	background-color: #white !important;
+	padding: 60px;
+	text-align: center;
+
+}
+
+#user-image .container{
+	width: 1024px;
+}
+
+#user-image .panel-h2, #user-image .panel-p{
+	color: #5C5C5C;
+}
+
+
+strong{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 16px;
+}
+#user-image p{
+	line-height: 22px;
+	font-size: 16px;
+}
+/* ==========================================================================
+   Choose An Artist
+   ========================================================================== */
+	 #artist-style{
+	 	width: 100%;
+	 	background-color: black !important;
+	 	padding: 60px;
+	 	text-align: center;
+
+	 }
+
+	 #artist-style .container{
+	 	width: 1024px;
+	 }
+
+	 #artist-style .panel-h2, #artist-style .panel-p{
+	 	color: white;
+	 }
+
+
+	 strong{
+	 	font-weight: bold;
+	 	font-style: italic;
+	 	font-size: 16px;
+	 }
+	 #artist-style p{
+	 	line-height: 22px;
+	 	font-size: 16px;
+	 }
+
+	 .artist{
+		 padding-left: 10 px;
+
+	 }
+	 /* ==========================================================================
+			    Generate Art
+			    ========================================================================== */
+
+			 #generate-art{
+			 	width: 100%;
+			 	background-color: #white !important;
+			 	padding: 60px;
+			 	text-align: center;
+
+			 }
+
+			 #generate-art .container{
+			 	width: 1024px;
+			 }
+
+			 #generate-art .panel-h2, #generate-art .panel-p{
+			 	color: #5C5C5C;
+			 }
+
+
+			 strong{
+			 	font-weight: bold;
+			 	font-style: italic;
+			 	font-size: 16px;
+			 }
+			 #generate-art p{
+			 	line-height: 22px;
+			 	font-size: 16px;
+			 }
+
+			 .submit{
+	background-color: transparent;
+	border: 2px solid #5c5c5c;
+	width: 190px;
+	height: 50px;
+	color: #5C5C5C;
+	font-size: 18px;
+	font-weight: bold;
+		margin-top: 18px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.submit:hover{
+
+ 	 background-color: #5C5C5C;
+ 	 color: white;
+}
+/* ==========================================================================
+   results
+   ========================================================================== */
+
+.results{
+	background-color: #F9F9F9 !important;
+	padding: 60px;
+	text-align: center;
+	height: 60%;
+}
+
+.result-img{
+	height: 60% !important;
+	width: 60% !important;
+}
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
+
+footer{
+	background-color: black;
+	height: 50px;
+	text-align: center;
+
+	color: white;
+}
+footer p{
+	padding-top: 15px;
+
+
+}
+
+
+/* testing css for forms */
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+	height: 200px;
+
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
